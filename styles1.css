@@ -1,0 +1,164 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0e0e0e;
+    color: #fff;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    opacity: 1;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffaa00;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(120deg, rgba(255,204,0,0.8), rgba(255,170,0,0.8)), url('hero.jpg') no-repeat center/cover;
+    color: white;
+    opacity: 1;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Sections with Fade-in Effect */
+section {
+    padding: 80px 10%;
+    text-align: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+}
+
+/* Ensure Sections are Visible */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animated Buttons with Hover Effect */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+    animation: pulse 1.5s infinite;
+}
+
+.btn:hover {
+    background: #ffaa00;
+    transform: scale(1.1) rotate(3deg);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Job Cards Visibility Fix */
+.job-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+}
+
+.job-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 8px 20px rgba(255, 204, 0, 0.6);
+}
+
+/* Contact Form Fix */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
+
+.contact input, .contact textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #ffaa00;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}

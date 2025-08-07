@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HAL Careers, HAL Jobs, Aerospace Jobs, Engineering Jobs">
+    <meta name="description" content="Explore career opportunities at Hindustan Aeronautics Limited (HAL) in aerospace, defense, engineering, and technology.">
+    <title>Careers at HAL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+    <script src="script.js" defer></script>
+    <script src="script1.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">HAL</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#openings">Job Openings</a></li>
+                <li><a href="#apply">Apply Now</a></li>
+                <li><a href="#contact">Contact HR</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="career-hero">
+        <h1>Explore Careers at HAL</h1>
+        <p>Join a team dedicated to innovation in aerospace and defense technology.</p>
+    </section>
+
+    <!-- Job Search & Filters -->
+    <section id="openings" class="job-section">
+        <h2>Current Job Openings</h2>
+        <div class="job-filters">
+            <input type="text" id="searchJob" placeholder="Search for a job..." onkeyup="filterJobs()">
+            <select id="jobCategory" onchange="filterJobs()">
+                <option value="all">All Categories</option>
+                <option value="engineering">Engineering</option>
+                <option value="research">Research & Development</option>
+                <option value="management">Management</option>
+            </select>
+        </div>
+
+        <!-- Job Listings -->
+        <div class="job-listings">
+            <div class="job-card" data-category="engineering">
+                <h3>Aerospace Engineer</h3>
+                <p><strong>Location:</strong> Bengaluru, India</p>
+                <p>Design and develop next-generation aircraft and UAV systems.</p>
+                <button onclick="applyNow('Aerospace Engineer')">Apply Now</button>
+            </div>
+
+            <div class="job-card" data-category="research">
+                <h3>AI Avionics Researcher</h3>
+                <p><strong>Location:</strong> Hyderabad, India</p>
+                <p>Work on AI-driven avionics and autonomous flight systems.</p>
+                <button onclick="applyNow('AI Avionics Researcher')">Apply Now</button>
+            </div>
+
+            <div class="job-card" data-category="management">
+                <h3>Project Manager</h3>
+                <p><strong>Location:</strong> New Delhi, India</p>
+                <p>Lead aerospace projects and manage cross-functional teams.</p>
+                <button onclick="applyNow('Project Manager')">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Application Form -->
+    <section id="apply" class="apply-section">
+        <h2>Apply Now</h2>
+        <form onsubmit="return validateApplicationForm()">
+            <input type="text" id="applicantName" placeholder="Full Name" required>
+            <input type="email" id="applicantEmail" placeholder="Email Address" required>
+            <input type="text" id="applicantJob" placeholder="Job Applying For" readonly>
+            <textarea id="applicantMessage" placeholder="Why should we hire you?" required></textarea>
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <!-- Contact HR -->
+    <section id="contact" class="contact-section">
+        <h2>Contact HR</h2>
+        <p>Email: hr@hal.com | Phone: +91-1234567890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Hindustan Aeronautics Limited | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
